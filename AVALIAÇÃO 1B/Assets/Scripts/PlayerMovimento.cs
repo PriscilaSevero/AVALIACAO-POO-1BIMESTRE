@@ -24,11 +24,7 @@ public class PlayerMovimento : MonoBehaviour
         
         UnityEngine.Vector3 movimento = new Vector3(h, 0, v);
         rb.AddForce(movimento * velocidade * Time.deltaTime, ForceMode.Impulse);
-        
-        If(Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(Vector3.up * forcaPulo, ForceMode.Impulse );
-        }
+     
 
         
     }

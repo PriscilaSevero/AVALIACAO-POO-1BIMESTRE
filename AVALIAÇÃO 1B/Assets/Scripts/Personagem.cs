@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Personagem : MonoBehaviour
 {
-    public string personagem;
+    public string demonio;
     public int energia;
     public float velocidade;
     public float pulo;
     public int ataque;
     
-    public Personagem(string personagem, int energia, float velocidade, float pulo, int ataque)
+    public Personagem(string demonio, int energia, float velocidade, float pulo, int ataque)
     {
-        this.personagem = personagem;
+        this.demonio = demonio;
         this.energia = energia;
         this.velocidade = velocidade;
         this.pulo = pulo;
@@ -21,7 +21,7 @@ public class Personagem : MonoBehaviour
 
     public string setPersonagem()
     {
-        return this.personagem;
+        return this.demonio;
     }
 
     public int setEnergia()
@@ -43,6 +43,9 @@ public class Personagem : MonoBehaviour
     {
         return this.ataque; 
     }
+    
+    
+  
     void Start()
     {
         
