@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Personagem : MonoBehaviour
 {
@@ -9,15 +10,6 @@ public class Personagem : MonoBehaviour
     public float velocidade;
     public float pulo;
     public int ataque;
-    
-    public Personagem(string demonio, int energia, float velocidade, float pulo, int ataque)
-    {
-        this.demonio = demonio;
-        this.energia = energia;
-        this.velocidade = velocidade;
-        this.pulo = pulo;
-        this.ataque = ataque;
-    }
 
     public string setPersonagem()
     {
@@ -41,19 +33,19 @@ public class Personagem : MonoBehaviour
 
     public int setAtaque()
     {
-        return this.ataque; 
-    }
-    
-    
-  
-    void Start()
-    {
-        
+        return this.ataque;
     }
 
+   
     
-    void Update()
+    public void Morte (Personagem demonio)
     {
+        if (this.energia <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
         
     }
 }
+
+    

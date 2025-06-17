@@ -2,59 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Vilão : MonoBehaviour
+public class Vilao : MonoBehaviour
 {
-
-    public string inimigo; 
-    public int energiaInimigo;
-    public float velocidadeIimigo;
-    public float puloInimigo;
+    public string nomeInimigo;
     public int ataqueInimigo;
-    
-    public Vilão(string inimigo, int energiaInimigo, float velocidadeIimigo, float puloInimigo, int ataqueInimigo)
+
+    public int getAtaqueInimigo()
     {
-        this.inimigo = inimigo;
-        this.energiaInimigo = energiaInimigo;
-        this.velocidadeIimigo = velocidadeIimigo;
-        this.puloInimigo = puloInimigo;
-        this.ataqueInimigo = ataqueInimigo;
+        return ataqueInimigo;
     }
 
-    public string setInimigo()
+    public string getNomeInimigo()
     {
-        return this.inimigo;
-    }
-
-    public int setEnergiaInimigo()
-    {
-        return this.energiaInimigo;
-    }
-
-    public float setVelocidadeInimigo()
-    {
-        return this.velocidadeIimigo;
-    }
-
-    public float setPuloInimigo()
-    {
-        return this.puloInimigo;
-    }
-
-    public int setAtaqueInimigo()
-    {
-        return this.ataqueInimigo; 
-    }
-
-        
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        return nomeInimigo;
     }
 }
+        
+    // Start is called before the first frame update
+    
+    
+
+    // Update is called once per frame
+    
+
