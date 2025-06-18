@@ -5,36 +5,63 @@ using UnityEngine.SceneManagement;
 
 public class Personagem : MonoBehaviour
 {
-    public string demonio;
+    public string nome;
     public int energia;
     public float velocidade;
     public float pulo;
     public int ataque;
 
-    public string setPersonagem()
+    
+    public string Nome()
     {
-        return this.demonio;
+        return this.nome;
     }
 
-    public int setEnergia()
+    public void setNome(string guerreiro)
+    {
+        this.nome = nome;
+    }
+    
+    public int Energia()
     {
         return this.energia;
     }
-
-    public float setVelocidade()
+    
+    public void setEnergia(int energia)
+    {
+    this.energia = energia;
+    }
+    
+    public float Velocidade()
     {
         return this.velocidade;
     }
 
-    public float setPulo()
+    public void setVelocidade(float velocidade)
+    {
+        this.velocidade = velocidade;
+    }
+
+    public float Pulo()
     {
         return this.pulo;
     }
 
-    public int setAtaque()
+    public void setPulo(float pulo)
+    {
+        this.pulo = pulo;
+    }
+
+    public int Ataque()
     {
         return this.ataque;
     }
+
+    public void setAtaque(int ataque)
+    {
+        this.ataque = ataque;
+    }
+    
 
    
     

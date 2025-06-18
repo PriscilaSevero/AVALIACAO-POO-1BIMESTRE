@@ -4,35 +4,38 @@ using UnityEngine;
 
 public class Teste : MonoBehaviour
 {
+    Personagem guerreiro = new Personagem();
+    Demonio demonio = new Demonio();
     
-    G
-    public void CompararForcaCom(Vilao inimigo)
-    {
-        if (Demonio.getEnergia < inimigo.getAtaqueInimigo())
+        void Start()
         {
-            Debug.Log($"{Personagem.getPersonagem()} é mais fraco que {inimigo.getNomeInimigo()}.");
+            //atributos
             
+            guerreiro.setNome("Guerreiro");
+            guerreiro.setAtaque(15);
+            guerreiro.setPulo(7f);
+            guerreiro.setEnergia(12);
+            guerreiro.setVelocidade(10f);
+
+            demonio.setNome("Demonio");
+            demonio.setAtaque(20);
+            demonio.setPulo(10f);
+            demonio.setEnergia(30);
+            demonio.setVelocidade(20f);
+            
+            //atacou
+            demonio.UsouChamasDoInferno(guerreiro);
+            demonio.UsouChamasDoInferno(guerreiro);
+
+            // energia depois do ataque
+            if (guerreiro.Energia() <= 0)
+            {
+                Debug.Log("O " + guerreiro.Nome() + " está sem energia");
+            }
+            else
+            {
+                Debug.Log("O " + guerreiro.Nome() + " ainda tem " + guerreiro.Energia() + " de energia");
+            }
         }
-        
-        Debug.Log($"{this.demonio} é mais forte que {inimigo.getNomeInimigo()}.");
-        
-        
-        else if (this.forca < outro.forca)
-            return $"{outro.nome} é mais forte que {this.nome}.";
-        else
-            return $"{this.nome} e {outro.nome} têm a mesma força.";
 
-    }
-
-    // SCRIPT DO DEBUG.LOG
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

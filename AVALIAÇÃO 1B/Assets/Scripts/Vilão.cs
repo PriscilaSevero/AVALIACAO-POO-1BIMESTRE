@@ -17,11 +17,5 @@ public class Vilao : MonoBehaviour
         return nomeInimigo;
     }
 }
-        
-    // Start is called before the first frame update
-    
-    
 
-    // Update is called once per frame
-    
 
